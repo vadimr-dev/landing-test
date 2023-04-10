@@ -1,0 +1,70 @@
+.projectWrapper {
+    width: 600px;
+    padding: 64px 112px;
+    border: 1px solid #E3D18F;
+    color: #FFFFFF;
+    position: relative;
+    opacity: 1; /* Мабуть тимачасово*/
+    animation: show 2s ease;
+    margin: 260px 0 0 100px;
+}
+.projectWrapper h3{
+    padding-bottom: 20px;
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+}
+.projectWrapper p{
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    padding-bottom: 40px;
+}
+
+.closeProject{
+    position: absolute;
+	top: 24px;
+	right: 24px;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;    
+}
+.closeProject:hover::before,
+.closeProject:hover::after{
+    background: #e3d18f;
+}
+.closeProject::before,
+.closeProject::after {
+	content: '';
+	position: absolute;
+	top: 10px;
+	display: block;
+	width: 24px;
+	height: 1.5px;
+	background: #7A6C42;
+    transition: all ease 0.5s;
+}
+.closeProject::before {
+	transform: rotate(45deg);
+}
+.closeProject::after {
+	transform: rotate(-45deg);
+}
+
+@keyframes show { /* Коли буде компонент projects тоді змінемо анімацію появи*/
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

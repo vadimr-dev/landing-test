@@ -1,0 +1,122 @@
+.registrationWrapper{
+    max-width: 720px;
+    width: 100%;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: #1B1509;
+    padding: 64px 0;
+    max-height: 100vh;
+}
+.closeRegistration{
+    position: absolute;
+	top: 24px;
+	right: 24px;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;    
+}
+.closeRegistration:hover::before,
+.closeRegistration:hover::after{
+    background: #e3d18f;
+}
+.closeRegistration::before,
+.closeRegistration::after {
+	content: '';
+	position: absolute;
+	top: 10px;
+	display: block;
+	width: 24px;
+	height: 1.5px;
+	background: #7A6C42;
+    transition: all ease 0.5s;
+}
+.closeRegistration::before {
+	transform: rotate(45deg);
+}
+.closeRegistration::after {
+	transform: rotate(-45deg);
+}
+.registrationWrapper h2{
+    margin-bottom: 16px;
+}
+.registrationWrapper form{
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.registrationWrapper input{
+    width: 100%;
+    height: 44px;
+    padding: 10px;
+    margin-top: 24px;
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: #1B1509;
+    border: none;
+    outline: none;
+    background-color: #ECDFB1;
+}
+.registrationWrapper input[value=""]{
+    background-color: #ffffff;
+}
+.registrationWrapper input:focus{
+    background-color: #ECDFB1;
+}
+.error{
+    border: 1px solid #D75357 !important;
+    background-color: #ffffff !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+.registrationWrapper input[type="checkbox"]{
+    width: 24px;
+    height: 24px;
+    margin-top: 0;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+    accent-color: #ECDFB1;
+    cursor: pointer;
+}
+.wrapperCheckbox{
+    width: 100%;
+    text-align: left;
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin-top: 24px;
+    margin-bottom: 64px;
+}
+.errorForm{
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #D75357;
+    text-align: left;
+}
+@media (max-width: 600px){
+    .registrationWrapper input, .wrapperCheckbox{
+        font-size: 16px;
+    }
+    .registrationWrapper input[type="checkbox"]{
+        vertical-align: middle;
+    }
+    .registrationWrapper{
+        overflow-y: scroll;
+    }
+}

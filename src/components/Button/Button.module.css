@@ -1,0 +1,42 @@
+.mainBtn {
+  color: #ffffff;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  background: none;
+  border: solid 1px #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.mainBtn:hover {
+  color: #1b1509;
+  padding: 12px 24px;
+  background-color: #e3d18f;
+  border: solid 1px #e3d18f;
+}
+
+.mainBtn:active {
+  color: #1b1509;
+  padding: 12px 24px;
+  background-color: #b7a051;
+  border: solid 1px #b7a051;
+}
+
+.mainBtn:disabled {
+  color: #5d5d5f;
+  padding: 12px 24px;
+  background-color: #bfbfbf;
+  border: solid 1px #5d5d5f;
+}
+
+@media (max-width: 600px){
+  .mainBtn {
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

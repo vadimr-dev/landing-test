@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
+}
+
+h2{
+  font-family: 'Jura';
+font-style: normal;
+font-weight: 700;
+font-size: 44px;
+line-height: 52px;
+color: #FFFFFF;
+}
+
+.ringsWrapper {
+  position: fixed;
+  z-index: 9999;
+}
+
+.mainBackground {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  max-width: 1440px;
+  width: 100%;
+  overflow-x: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1B1509;
+}
+
+.mainBackground img {
+  width: 1944px;
+  height: 1944px;
+  z-index: -4;
+  margin-top: 1500px;
+  transform: rotate(-90deg);
+}
+
+.appWrapper {
+  margin: 0 auto;
+  position: relative;
+  background-color: #1B1509;
+}
+
+.mainBtn {
+  color: #FFFFFF;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  background: none;
+  border: solid 1px #FFFFFF;
+}
+
+.mainBtn:hover {
+  color: #1B1509;
+  padding: 12px 24px;
+  background-color: #E3D18F;
+  border: solid 1px #FFFFFF;
+}
+
+.mainBtn:active {
+  color: #1B1509;
+  padding: 12px 24px;
+  background-color: #B7A051;
+  border: solid 1px #B7A051;
+}
+
+.mainBtn:disabled{
+  color: #5D5D5F;
+  padding: 12px 24px;
+  background-color: #BFBFBF;
+  border: solid 1px #5D5D5F;
+}
+
+a{
+  color: #E3D18F;
+}
+
+a:hover{
+  color: #ffffff;
+}
+
+@media (max-width: 600px){
+  h2{
+    font-size: 24px;
+    line-height: 150%;
+  }
+}

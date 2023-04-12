@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="appWrapper">
-      {/* <Registration /> */}
+      {<Registration />}
       <Rings />
       <BackgroundImage />
       <Header />

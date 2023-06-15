@@ -1,8 +1,17 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect, createContext, useCallback } from "react";
 
 export const AppContext = createContext();
 
 const Context = (props) => {
+  const [isInfoBlockShow, setInfoBlockShow] = useState(false);
+  const [isProjectsBlockShow, setProjectsBlockShow] = useState(false);
+  const [isMainTitleShow, setMainTitleShow] = useState(true);
+  const [showRings, setShowRings] = useState(false);
+  const [isPartnersBlockShow, setPartnersBlockShow] = useState(false);
+  const [mainComponent, setMainComponent] = useState(null);
+  const [currentScrollY, setCurrentScrollY] = useState(null);
+  const [isFooterShow, setFooterShow] = useState(null);
+
   function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
     return {
@@ -11,9 +20,114 @@ const Context = (props) => {
     };
   }
 
+  const [currentScreen, setCurrentScreen] = useState(1);
+
+  const positionAnimateY = (windowDimensions) => {
+    if (windowDimensions.width > 900) {
+      return 0;
+    } else if (windowDimensions.width > 800) {
+      return -60;
+    } else if (windowDimensions.width > 700) {
+      return -100;
+    } else if (windowDimensions.width > 500) {
+      return -100;
+    } else if (windowDimensions.width > 420) {
+      return -300;
+    } else if (windowDimensions.width > 300) {
+      return -320;
+    }
+    return -190;
+  };
+
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
   );
+  const [animate, setAnimate] = useState({
+    x: 0,
+    y: positionAnimateY(windowDimensions),
+    rotate: 0,
+  });
+  const [ringsAnimate, setRingsAnimate] = useState({
+    x: 0,
+    // y: positionAnimateY(windowDimensions),
+    y: 0,
+    rotate: 0,
+  });
+
+  const widthImage = (windowDimensions) => {
+    if (windowDimensions.width >= 1440) {
+      return 1944;
+    }
+    return windowDimensions.width * 2;
+  };
+
+  const positionAnimateX = useCallback(
+    (windowDimensions) => {
+      if (windowDimensions.width <= 430) {
+        return currentScreen === 2
+          ? -(windowDimensions.width - 60)
+          : windowDimensions.width + 40;
+      }
+      if (windowDimensions.width <= 870) {
+        return currentScreen === 2
+          ? -(windowDimensions.width - 60)
+          : windowDimensions.width - 50;
+      }
+      if (windowDimensions.width <= 1070) {
+        return currentScreen === 2
+          ? -(windowDimensions.width - 200)
+          : windowDimensions.width - 150;
+      }
+      if (windowDimensions.width < 1280) {
+        return currentScreen === 2
+          ? -(windowDimensions.width - 300)
+          : windowDimensions.width - 200;
+      }
+      if (windowDimensions.width < 1350) {
+        return currentScreen === 2
+          ? -(windowDimensions.width - 350)
+          : windowDimensions.width - 250;
+      }
+      if (windowDimensions.width < 1440) {
+        return currentScreen === 2
+          ? -(windowDimensions.width - 500)
+          : windowDimensions.width - 300;
+      }
+      return currentScreen === 2 ? -870 : 1100;
+    },
+    [currentScreen]
+  );
+
+  useEffect(() => {
+    if (currentScreen === 1) {
+      setAnimate({
+        x: 0,
+        y: positionAnimateY(windowDimensions),
+      });
+    }
+    if (currentScreen === 2) {
+      setAnimate({
+        x: positionAnimateX(windowDimensions),
+        y: -650,
+        rotate: 90,
+      });
+    }
+    if (currentScreen === 3) {
+      setAnimate({
+        x: positionAnimateX(windowDimensions),
+        y: -650,
+        rotate: 180,
+      });
+    }
+    if (currentScreen === 4) {
+      setFooterShow(true);
+      setAnimate({
+        x: positionAnimateX(windowDimensions),
+        y: -1000,
+        rotate: 180,
+      });
+    }
+  }, [windowDimensions, currentScreen, positionAnimateX]);
 
   useEffect(() => {
     function handleResize() {
@@ -24,18 +138,7 @@ const Context = (props) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  console.log(windowDimensions);
-  const [animate, setAnimate] = useState({
-    x: 0,
-    y: 0,
-    rotate: 0,
-  });
-
-  const [isInfoBlockShow, setInfoBlockShow] = useState(false);
-  const [isProjectsBlockShow, setProjectsBlockShow] = useState(false);
-  const [isMainTitleShow, setMainTitleShow] = useState(true);
-  const [showRings,setShowRings] = useState(false);
-  const [infoBlock, setInfoBlock] = useState([
+  const infoBlock = [
     {
       id: 1,
       title: "ПРО WEB3",
@@ -78,21 +181,17 @@ const Context = (props) => {
       ),
       textBTN: "ЗАРЕЄСТРУВАТИСЯ",
     },
-  ]);
+  ];
 
   const showScreen1 = () => {
-    setAnimate({ x: 0, y: 0, rotate: 0 });
+    setCurrentScreen(1);
     setInfoBlockShow(false);
     setMainTitleShow(true);
     setShowRings(false);
   };
 
   const showScreen2 = () => {
-    setAnimate({
-      x: -870,
-      y: -650,
-      rotate: 90,
-    });
+    setCurrentScreen(2);
     setInfoBlockShow(true);
     setProjectsBlockShow(false);
     setMainTitleShow(false);
@@ -100,12 +199,38 @@ const Context = (props) => {
   };
 
   const showScreen3 = () => {
-    setAnimate({ x: 1100, y: -650, rotate: 180 });
+    setPartnersBlockShow(false);
+    setCurrentScreen(3);
     setProjectsBlockShow(true);
     setInfoBlockShow(false);
     setShowRings(true);
+    setRingsAnimate({
+      x: 0,
+      // y: positionAnimateY(windowDimensions),
+      y: "-50%",
+      rotate: 359,
+    });
   };
+  const showScreen4 = () => {
+    setCurrentScreen(4);
+    setProjectsBlockShow(false);
+    setInfoBlockShow(false);
+    setPartnersBlockShow(true);
+    setRingsAnimate({
+      x: 0,
+      // y: positionAnimateY(windowDimensions),
+      y: "-75%",
+      rotate: 340,
+    });
+  };
+  const [mainBlockRef, setMainBlockRef] = useState(null);
+  const [infoBlockRef, setInfoBlockRef] = useState(null);
+  const [projectsBlockRef, setProjectsBlockRef] = useState(null);
+  const [partnersBlockRef, setPartnersBlockRef] = useState(null);
 
+  const scrollToView = (el) => {
+    el.current.scrollIntoView();
+  };
   const value = {
     animate,
     setAnimate,
@@ -120,6 +245,29 @@ const Context = (props) => {
     showScreen1,
     showScreen2,
     showScreen3,
+    windowDimensions,
+    widthImage,
+    mainComponent,
+    setMainComponent,
+    currentScrollY,
+    setCurrentScrollY,
+    showScreen4,
+    setPartnersBlockShow,
+    isPartnersBlockShow,
+    ringsAnimate,
+    setRingsAnimate,
+    isFooterShow,
+    setFooterShow,
+    currentScreen,
+    mainBlockRef,
+    setMainBlockRef,
+    infoBlockRef,
+    setInfoBlockRef,
+    projectsBlockRef,
+    setProjectsBlockRef,
+    partnersBlockRef,
+    setPartnersBlockRef,
+    scrollToView,
   };
 
   return (

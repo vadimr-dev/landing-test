@@ -1,14 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import styles from "./Project.module.css";
 import Button from "../Button/Button";
-import { AppContext } from "../../context/Context";
 
 const Project = () => {
-  const data = useContext(AppContext);
 
   return (
     <>
-      {data.isProjectsBlockShow && ( // Тимчасово замість блоку Projects будемо відображати цей компонент.
         <div className={styles.projectWrapper}>
           <div className={styles.closeProject}></div>
           <h3>Title</h3>
@@ -20,7 +17,7 @@ const Project = () => {
           </p>
           <Button text="дізнатися більше" />
         </div>
-      )}
+    
     </>
   );
 };

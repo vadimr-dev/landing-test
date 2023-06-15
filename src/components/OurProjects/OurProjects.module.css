@@ -1,0 +1,136 @@
+.wrapper {
+    margin: 260px 0 0 0;
+    max-width: 840px;
+    width: 100%;
+    animation: show 2s ease;
+    opacity: 1;
+  }
+
+  @keyframes show {
+    0% {
+      opacity: 0;
+    }
+  
+    70% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  .wrapperTitle {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 26px;
+  }
+  .wrapperTitle h2 {
+    font-family: "Orbitron";
+    font-style: normal;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 32px;
+    line-height: 40px;
+    margin-right: 16px;
+    text-transform: uppercase;
+  }
+  .wrapperTitle h3 {
+    font-size: 16px;
+    line-height: 28px;
+    font-family: "Jura";
+    font-style: normal;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  .Block {
+    color: #ffffff;
+    width: 100%;
+    margin-top: 100px;
+  }
+  
+  .Block h2 {
+    font-family: "Jura";
+    font-style: normal;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 52px;
+    margin-bottom: 44px;
+  }
+/* .Block ul li{
+    cursor: pointer;
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    padding-bottom: 24px;
+    list-style: none;
+}
+.circle{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    border: 1px solid #E3D18F;
+    box-sizing: border-box;
+    transition: all ease 0.5s;
+}
+.line{
+    display: inline-block;
+    margin: 0 32px;
+    width: 51px;
+    height: 1px;
+    background: #7A6C42;
+    border-radius: 8px;
+    vertical-align: middle;
+    transition: all ease 0.5s;
+}
+.Block ul li:hover .circle{
+    background: #E3D18F;
+}
+.Block ul li:active {
+    color: #ECDFB1;
+}
+.Block ul li:active .circle{
+    background: #B7A051;
+    border: 1px solid #B7A051;
+}
+.Block ul li:hover .line{
+    margin: 0 40px;
+} */
+@media (max-width: 600px){
+    .wrapper {
+        margin: 96px 0 0 0;
+    }
+    .wrapperTitle h2 {
+        font-size: 14px;
+        line-height: 150%;
+        margin-right: 10px;
+      }
+      .wrapperTitle h3 {
+        font-size: 14px;
+        line-height: 150%;
+      }
+      .Block {
+        margin-top: 80px;
+      }
+      .Block h2 {
+        font-size: 24px;
+        line-height: 150%;
+        margin-bottom: 40px;
+      }
+      /* .Block ul li{
+        font-size: 16px;
+        line-height: 150%;
+        padding-bottom: 16px;
+    }
+    .line{
+        display: none;
+    }
+    .circle{
+        width: 10px;
+        height: 10px;
+        margin-right: 24px;
+    } */
+}

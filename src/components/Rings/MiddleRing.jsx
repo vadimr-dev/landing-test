@@ -6,26 +6,34 @@ const MiddleRing = () => {
   return (
     <div className={styles.middleRingWrapper}>
       <div className={styles.middleRing}>
-        <img
-          className={styles.middleRingFirstPlanet}
-          src={planet1}
-          alt="project"
-        />
-        <img
-          className={styles.middleRingFirstPlanetSmall}
-          src={planet1}
-          alt="project"
-        />
-        <img
-          className={styles.middleRingSecondPlanetSmall}
-          src={planet1}
-          alt="project"
-        />
-        <img
-          className={styles.middleRingSecondPlanet}
-          src={planet1}
-          alt="project"
-        />
+        <div className={styles.orbitOfMiddleRingSecondPlanet}>
+          <img
+            className={styles.middleRingSecondPlanet}
+            src={planet1}
+            alt="project number"
+          />
+        </div>
+        <div className={styles.orbitOfMiddleRingSecondPlanetSmall}>
+          <img
+            className={styles.middleRingSecondPlanetSmall}
+            src={planet1}
+            alt="decorative planet"
+          />
+        </div>
+        <div className={styles.orbitOfMiddleRingFirstPlanetSmall}>
+          <img
+            className={styles.middleRingFirstPlanetSmall}
+            src={planet1}
+            alt="decorative planet"
+          />
+        </div>
+        <div className={styles.orbitOfMiddleRingFirstPlanet}>
+          <img
+            className={styles.middleRingFirstPlanet}
+            src={planet1}
+            alt="project"
+          />
+        </div>
       </div>
     </div>
   );

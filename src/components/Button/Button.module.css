@@ -1,6 +1,7 @@
 .mainBtn {
   color: #ffffff;
   padding: 12px 24px;
+  font-family: 'Orbitron';
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -34,9 +35,17 @@
 
 @media (max-width: 600px){
   .mainBtn {
+    font-family: 'Jura';
     padding: 10px 20px;
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
+  }
+}
+@media (max-width: 400px) {
+  .mainBtn {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 22px;
   }
 }

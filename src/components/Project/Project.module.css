@@ -1,12 +1,13 @@
 .projectWrapper {
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     padding: 64px 112px;
     border: 1px solid #E3D18F;
+    background: #1B1509;
     color: #FFFFFF;
     position: relative;
     opacity: 1; /* Мабуть тимачасово*/
     animation: show 2s ease;
-    margin: 260px 0 0 100px;
 }
 .projectWrapper h3{
     padding-bottom: 20px;
@@ -66,5 +67,16 @@
 
     100% {
         opacity: 1;
+    }
+}
+@media (max-width: 1000px){
+    .projectWrapper{
+        margin: 40px 0;
+    }
+}
+@media (max-width: 600px){
+    .projectWrapper{
+        margin: 40px 0;
+        padding: 64px 40px;
     }
 }

@@ -7,26 +7,34 @@ const SmallRing = () => {
   return (
     <div className={styles.smallRingWrapper}>
       <div className={styles.smallRing}>
-        <img
-          className={styles.smallRingFirstPlanet}
-          src={planet1}
-          alt="project"
-        />
-        <img
-          className={styles.smallRingFirstPlanetSmall}
-          src={planet1}
-          alt="project"
-        />
-        <img
-          className={styles.smallRingSecondPlanet}
-          src={planet2}
-          alt="project"
-        />
-        <img
-          className={styles.smallRingSecondPlanetSmall}
-          src={planet2}
-          alt="project"
-        />
+        <div className={styles.orbitOfSmallRingFirstPlanet}>
+          <img
+            className={styles.smallRingFirstPlanet}
+            src={planet1}
+            alt="project"
+          />
+        </div>
+        <div className={styles.orbitOfSmallRingFirstPlanetSmall}>
+          <img
+            className={styles.smallRingFirstPlanetSmall}
+            src={planet1}
+            alt="project"
+          />
+        </div>
+        <div className={styles.orbitOfSmallRingSecondPlanet}>
+          <img
+            className={styles.smallRingSecondPlanet}
+            src={planet2}
+            alt="project"
+          />
+        </div>
+        <div className={styles.orbitOfSmallRingSecondPlanetSmall}>
+          <img
+            className={styles.smallRingSecondPlanetSmall}
+            src={planet2}
+            alt="project"
+          />
+        </div>
       </div>
     </div>
   );

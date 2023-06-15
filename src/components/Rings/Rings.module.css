@@ -1,11 +1,15 @@
 .ringsWrapper {
-  width: 100vw;
-  height: 100vh;
-  background: none;
-  align-items: center;
+  width: 130vw;
+  height: 130vh;
+  
   position: fixed;
+  top: 50%;
+  left: 50%;
   z-index: 20;
-  animation: show 1s ease;
+  
+  /* transform: translateY(-50%) rotate(359deg); */
+
+  animation: show 2500ms ease-in-out;
 }
 
 .ringsWrapper img {
@@ -13,224 +17,259 @@
   box-shadow: 0 0 10px #e3d18f61;
 }
 
+/* ---Planets orbits common styles--- */
+.orbitOfSmallRingFirstPlanet,
+.orbitOfSmallRingFirstPlanetSmall,
+.orbitOfSmallRingSecondPlanet,
+.orbitOfSmallRingSecondPlanetSmall,
+.orbitOfMiddleRingFirstPlanet,
+.orbitOfMiddleRingFirstPlanetSmall,
+.orbitOfMiddleRingSecondPlanetSmall,
+.orbitOfMiddleRingSecondPlanet,
+.orbitOfLargeRingFirstPlanet,
+.orbitOfLargeRingFirstPlanetSmall,
+.orbitOfLargeRingSecondPlanet,
+.orbitOfLargeRingSecondPlanetSmall,
+.orbitOfLargeRingThirdPlanet,
+.orbitOfLargeRingThirdPlanetSmall {
+  border-radius: 100%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* ---Common Planets Styles--- */
+.smallRingFirstPlanet,
+.smallRingFirstPlanetSmall,
+.smallRingSecondPlanet,
+.smallRingSecondPlanetSmall,
+.middleRingSecondPlanet,
+.middleRingSecondPlanetSmall,
+.middleRingFirstPlanetSmall,
+.middleRingFirstPlanet,
+.largeRingFirstPlanet,
+.largeRingFirstPlanetSmall,
+.largeRingSecondPlanet,
+.largeRingSecondPlanetSmall,
+.largeRingThirdPlanet,
+.largeRingThirdPlanetSmall {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+
+  transform: translate(-50%, 0px);
+}
+
+/* ---Small Ring--- */
 .smallRingWrapper {
   width: 100%;
   height: 100%;
-  position: absolute;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  position: absolute;
 }
 
 .smallRing {
-  margin: 120px;
+  width: 100%;
+  margin: 12%;
+
   border: solid 1px #393937;
   border-radius: 100%;
-  max-width: 638px;
-  width: 100%;
-  position: relative;
   aspect-ratio: 1 / 1;
+
+  position: relative;
 }
 
 .smallRingFirstPlanet {
-  position: absolute;
   width: 30px;
   height: 30px;
-  top: 72%;
-  left: 4%;
-  z-index: 9999;
+  /* outline: 1px solid rgb(255, 0, 0); */
 }
-
 .smallRingFirstPlanetSmall {
-  position: absolute;
   width: 6px;
   height: 6px;
-  top: 88%;
-  left: 17.4%;
-  z-index: 9999;
+  /* outline: 1px solid rgb(106, 255, 0); */
 }
-
 .smallRingSecondPlanet {
-  position: absolute;
   width: 24px;
   height: 24px;
-  top: 23%;
-  left: 5%;
-  z-index: 9999;
+  /* outline: 1px solid rgb(0, 60, 255); */
 }
-
 .smallRingSecondPlanetSmall {
-  position: absolute;
   width: 4px;
   height: 4px;
-  top: 16%;
-  left: 12.6%;
-  z-index: 9999;
+  /* outline: 1px solid rgb(204, 0, 255); */
 }
 
+.orbitOfSmallRingFirstPlanet{
+  transform: rotate(5deg);
+}
+.orbitOfSmallRingFirstPlanetSmall{
+  transform: rotate(21deg);
+}
+.orbitOfSmallRingSecondPlanet {
+  transform: rotate(345deg);
+}
+.orbitOfSmallRingSecondPlanetSmall {
+  transform: rotate(336deg);
+}
+
+/* ---Midle Ring--- */
 .middleRingWrapper {
   width: 100%;
   height: 100%;
-  position: absolute;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  position: absolute;
 }
 
 .middleRing {
-  padding: 59px;
-  margin: 61px;
+  /* padding: 5%; */
+  margin: 6%;
+
+  width: 100%;
   border: solid 1px #776754;
   border-radius: 100%;
-  max-width: 756px;
-  width: 100%;
-  position: relative;
   aspect-ratio: 1 / 1;
+
+  position: relative;
+}
+.orbitOfMiddleRingFirstPlanet{
+  transform: rotate(335deg);
+}
+.orbitOfMiddleRingFirstPlanetSmall {
+  transform: rotate(350deg);
+}
+.orbitOfMiddleRingSecondPlanetSmall{
+  transform: rotate(5deg);
+}
+.orbitOfMiddleRingSecondPlanet {
+  transform: rotate(20deg);
 }
 
-.middleRingFirstPlanet {
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  top: 95%;
-  left: 32%;
-  z-index: 9999;
-}
-
-.middleRingFirstPlanetSmall {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  top: 82%;
-  left: 11.4%;
-  z-index: 9999;
-}
-
-.middleRingSecondPlanetSmall {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  top: 38%;
-  left: 0.8%;
-  z-index: 9999;
-}
 
 .middleRingSecondPlanet {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 12%;
-  left: 14.4%;
-  z-index: 9999;
+  width: 28px;
+  height: 28px;
+  /* outline: 1px solid rgb(204, 0, 255); */
+}
+.middleRingSecondPlanetSmall {
+  width: 8px;
+  height: 8px;
+  /* outline: 1px solid red; */
+}
+.middleRingFirstPlanetSmall {
+  width: 12px;
+  height: 12px;
+  /* outline: 1px solid rgb(0, 13, 255); */
+}
+.middleRingFirstPlanet {
+  width: 40px;
+  height: 40px;
+  /* outline: 3px solid rgb(0, 255, 94); */
 }
 
 .largeRingWrapper {
   width: 100%;
   height: 100%;
-  position: absolute;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  position: absolute;
 }
 
 .largeRing {
+  width: 100%;
+
   border: solid 1px #475a58;
   border-radius: 100%;
-  max-width: 878px;
-  width: 100%;
-  position: relative;
   aspect-ratio: 1 / 1;
+
+  position: relative;
+}
+
+.orbitOfLargeRingFirstPlanet{
+  transform: rotate(341deg);
+}
+.orbitOfLargeRingFirstPlanetSmall{
+  transform: rotate(348deg);
+}
+.orbitOfLargeRingSecondPlanet{
+  transform: rotate(356deg);
+}
+.orbitOfLargeRingSecondPlanetSmall{
+  transform: rotate(0deg);
+}
+.orbitOfLargeRingThirdPlanet{
+  transform: rotate(10deg);
+}
+.orbitOfLargeRingThirdPlanetSmall{
+  transform: rotate(20deg);
 }
 
 .largeRingFirstPlanet {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 89%;
-  left: 18.8%;
-  z-index: 9999;
+  width: 32px;
+  height: 32px;
+  /* outline: 1px solid rgb(255, 0, 0); */
 }
-
 .largeRingFirstPlanetSmall {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  top: 78%;
-  left: 8.34%;
-  z-index: 9999;
-}
-
-.largeRingSecondPlanet {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 61%;
-  left: 0.3%;
-  z-index: 9999;
-}
-
-.largeRingSecondPlanetSmall {
-  position: absolute;
   width: 8px;
   height: 8px;
-  top: 53%;
-  left: -0.4%;
-  z-index: 9999;
+  /* outline: 1px solid rgb(255, 225, 0); */
 }
-
+.largeRingSecondPlanet {
+  width: 32px;
+  height: 32px;
+  /* outline: 1px solid rgb(38, 255, 0); */
+}
+.largeRingSecondPlanetSmall {
+  width: 10px;
+  height: 10px;
+  /* outline: 1px solid rgb(0, 255, 255); */
+}
 .largeRingThirdPlanet {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 25%;
-  left: 4.6%;
-  z-index: 9999;
+  width: 44px;
+  height: 44px;
+  /* outline: 1px solid rgb(0, 34, 255); */
 }
-
 .largeRingThirdPlanetSmall {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  top: 15%;
-  left: 13.6%;
-  z-index: 9999;
-}
-
-@media (max-width: 800px) {
-  .smallRingSecondPlanet {
-    left: 4.4%;
-  }
-
-  .smallRingSecondPlanetSmall {
-    left: 12.6%;
-  }
-
-  .middleRingSecondPlanetSmall {
-    left: 0.7%;
-  }
-
-  .largeRingThirdPlanet {
-    left: 4.4%;
-  }
-
-  .largeRingThirdPlanetSmall {
-    left: 13.4%;
-  }
+  width: 10px;
+  height: 10px;
+  /* outline: 1px solid rgb(115, 0, 255); */
 }
 
 @keyframes show {
   0% {
     opacity: 0;
+    left: 100%;
   }
-
+  50% {
+    opacity: 0;
+    transform: translateY(-50%) rotate(340deg);
+  }
+  80% {
+    opacity: 1;
+    left: 50%;
+  }
   100% {
-    opasity: 1;
+    transform: translateY(-50%) rotate(359deg);
   }
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   .smallRingFirstPlanetSmall {
     top: 95%;
     left: 29.3%;
   }
-}
+} */

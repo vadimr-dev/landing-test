@@ -1,0 +1,207 @@
+.wrapper {
+  margin-top: 150px;
+  animation: show 0.5s ease;
+  opacity: 1;
+}
+.wrapperTitle {
+  width: 171px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.wrapperTitle h2 {
+  color: white;
+  font-family: "Orbitron";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+}
+.wrapperTitle h3 {
+  color: white;
+  font-family: "Orbitron";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.Block h2 {
+  width: 60%;
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 52px;
+  margin-bottom: 44px;
+}
+.BlockText {
+  padding-bottom: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.list {
+  margin-bottom: 20px;
+} 
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 1400px) {
+  .wrapperTitle {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 70%;
+  }
+  .Block h2 {
+    width: 100%;
+    margin-bottom: 34px;
+  }
+  .wrapperTitle {
+    margin-bottom: 30px;
+  }
+  .list {
+    margin-bottom: 42px;
+  }
+}
+@media (max-width: 1024px) and (max-height: 600px) {
+  .wrapper {
+    margin-top: 118px;
+    width: 84%;
+  }
+  .wrapperTitle {
+    margin-bottom: 20px;
+  }
+  .wrapperTitle h2 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .wrapperTitle h3 {
+    font-size: 16;
+    line-height: 22px;
+  }
+  .Block h2 {
+    font-size: 33px;
+    line-height: 30px;
+    width: 100%;
+    margin-bottom: 34px;
+  }
+  .BlockText {
+    padding-bottom: 14px;
+  }
+  .list {
+    margin-bottom: 28px;
+  } 
+}
+
+@media (max-width: 980px) {
+  .wrapper {
+    width: 80%;
+  }
+  .wrapperTitle {
+    width: 135px;
+    margin-bottom: 40px;
+  }
+  .wrapperTitle h2 {
+    font-size: 21px;
+    line-height: 30px;
+  }
+  .wrapperTitle h3 {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .Block h2 {
+    font-size: 34px;
+    line-height: 35px;
+    margin-bottom: 37px;
+  }
+}
+@media (max-width: 870px) {
+  .wrapper {
+    width: 90%;
+  }
+  .BlockText {
+    padding-bottom: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    margin-top: 80px;
+  }
+  .wrapperTitle {
+    width: 110px;
+    margin-bottom: 20px;
+  }
+  .wrapperTitle h2 {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .wrapperTitle h3 {
+    font-family: "Jura";
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .Block h2 {
+    width: 80%;
+    font-family: "Jura";
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 40px;
+  }
+  .BlockText {
+    width: 100%;
+    padding-bottom: 12px;
+  }
+  .hover {
+    border: 8px solid #e3d18f;
+    margin-right: 5px;
+  }
+  .list {
+    margin-bottom: 38px;
+  }
+}
+@media (max-width: 540px) {
+  .wrapper {
+    margin-top: 100px;
+  }
+    .BlockText {
+      padding-bottom: 14px;
+    }
+    .Block h2 {
+      width: 100%;
+    }
+}
+@media (max-width: 400px) {
+  .wrapper {
+    width: 100%;
+    margin-top: 70px;
+  }
+  .wrapperTitle {
+    margin-bottom: 20px;
+  }
+  .Block h2 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+  .list {
+    margin-bottom: 5px;
+  }
+}

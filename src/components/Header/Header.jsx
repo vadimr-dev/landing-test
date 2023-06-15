@@ -1,30 +1,37 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { AppContext } from "../../context/Context";
 import styles from "./Header.module.css";
 import logoImage from "../../images/logo.svg";
 import Button from "../Button/Button";
+import Menu from "./Menu";
 
 const Header = () => {
+  const data = useContext(AppContext);
+  const { scrollToView, mainBlockRef, isMainTitleShow, setMainTitleShow } =
+    data;
+
+  useEffect(() => {
+    if (!isMainTitleShow) {
+      setMainTitleShow(true);
+    }
+  });
+
+  const scrollToMain = () => {
+    scrollToView(mainBlockRef);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.headerWrapper}>
         <figure className={styles.headerLogo}>
-          <img src={logoImage} alt="Golden community logo" />
+          <img
+            onClick={scrollToMain}
+            src={logoImage}
+            alt="Golden community logo"
+          />
         </figure>
         <nav className={styles.headerMenu}>
-          <ul className={styles.menuItems}>
-            <li className={styles.menuItem}>
-              <a href="">ХТО МИ</a>
-            </li>
-            <li className={styles.menuItem}>
-              <a href="">ПРОЄКТИ</a>
-            </li>
-            <li className={styles.menuItem}>
-              <a href="">ПАРТНЕРАМ</a>
-            </li>
-            <li className={styles.menuItem}>
-              <a href="">КОНТАКТИ</a>
-            </li>
-          </ul>
+          <Menu />
         </nav>
         <Button text="доєднатися" />
       </div>

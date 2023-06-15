@@ -4,7 +4,7 @@ import MobilScreen from "./Mobilscreen";
 import FullScreen from "./Fullscreen";
 import { AppContext } from "../../context/Context";
 
-const InfoBlock = () => {
+const InfoBlock = ({ ComponentRef }) => {
   const data = useContext(AppContext);
 
   const [matches, setMatches] = useState(
@@ -20,7 +20,11 @@ const InfoBlock = () => {
   return (
     <>
       {data.isInfoBlockShow && (
-        <div className={styles.wrapper}>
+        <div ref={ComponentRef} className={styles.wrapper}>
+          <div className={styles.wrapperTitle}>
+            <h2>01.</h2>
+            <h3>Хто ми</h3>
+          </div>
           {matches && <FullScreen />}
           {!matches && <MobilScreen />}
         </div>

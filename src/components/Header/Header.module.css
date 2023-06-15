@@ -1,65 +1,119 @@
 .header {
     z-index: 999;
-    height: 100px;
     position: fixed;
-    transform: translateX(-50%);
     padding: 26px 100px;
     background: linear-gradient(321.42deg, rgba(255, 255, 255, 0.04) 3.92%, rgba(255, 255, 255, 0) 58.08%), linear-gradient(112.33deg, rgba(255, 255, 255, 0.04) 10.85%, rgba(255, 255, 255, 0) 38.29%), rgba(23, 23, 24, 0.1);
     box-shadow: 0px -10px 50px rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(32px);
     width: 100%;
-    left: 50%;
+    left: 0;
 }
 
 .headerWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1440px;
+    max-width: 1240px;
     margin: 0 auto;
 }
 
 .headerMenu {
-    max-width: 494px;
+    max-width: 556px;
     width: 100%;
     padding: 8px;
 }
+.headerLogo{cursor: pointer;}
 
 .menuItems {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    transition: transform 0.3s ease;
 }
 
-.menuItem a {
+.mobileMenuItems {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuItem p {
     color: #FFFFFF;
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
     transition: all ease 0.5s;
+    cursor: pointer;
 }
 
-.menuItem a:hover {
+.menuItem p:hover {
     color: #E3D18F;
 }
 
-.menuItem a:active {
+.menuItem p:active {
     color: #B7A051;
 }
 
-@media (max-width: 1000px) {
-    .headerWrapper {
-        padding: 15px 40px;
+@media (min-width: 1200px){
+    .headerLogo{
+        margin-right: 100px;
     }
 }
 
-@media (max-width: 870px) {
-    .headerWrapper {
-        padding: 15px 30px;
+@media (max-width: 1000px) {
+    .header {
+        padding: 22px 40px;
     }
-    
+    .menuItem p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
     .headerMenu {
-        max-width: 400px;
-        width: 100%;
+        max-width: 420px;
     }
 }
+
+@media (max-width: 1000px){
+    .header button{
+      padding: 10px 20px !important;
+      font-weight: 500 !important;
+      font-size: 14px !important;
+      line-height: 24px !important;
+    }
+  }
+@media (max-width: 870px) {
+    .header {
+        padding: 22px 30px;
+    }   
+    .headerMenu {
+        max-width: 350px;
+    }
+}
+@media (max-width: 600px){
+    .header {
+        height: 56px;
+        padding: 19px 16px;
+    }
+    .header button{
+        display: none;
+    }
+    .headerLogo img{
+        width: 23px;
+    }
+    .menuItems{
+        flex-flow: column nowrap;
+        justify-content: normal;
+        background: linear-gradient(321.42deg, rgba(255, 255, 255, 0.04) 3.92%, rgba(255, 255, 255, 0) 58.08%), linear-gradient(112.33deg, rgba(255, 255, 255, 0.04) 10.85%, rgba(255, 255, 255, 0) 38.29%), rgba(23, 23, 24, 1);
+        backdrop-filter: blur(32px);
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 300px;
+        padding-top: 3.5rem;
+        padding-left: 30px;
+    }
+    .menuItem p {
+        line-height: 40px;
+    }
+  }

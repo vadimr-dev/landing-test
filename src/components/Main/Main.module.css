@@ -1,7 +1,7 @@
 .main {
     border: solid 0.1px rgba(0, 0, 0, 0);
     position: relative;
-    max-width: 1440px;
+    /* max-width: 1440px; */
     margin: 0 auto;
     height: 100vh;
     overflow-y: auto;
@@ -12,16 +12,6 @@
 
 .main::-webkit-scrollbar {
     display: none;
-}
-
-.mainTitle {
-    position: relative;
-    color: #FFFFFF;
-    max-width: 778px;
-    margin: 110px auto 0 auto;
-    font-size: 112px;
-    text-align: center;
-    animation: show 2s ease;
 }
 
 @keyframes show {
@@ -37,3 +27,21 @@
         opacity: 1;
     }
 }
+
+/* @media (max-width: 1000px) {
+    .main {
+      padding: 0 30px 0 30px;
+    }
+  }
+  
+  @media (max-width: 600px){
+    .main{
+      padding: 0 15px 0 15px;
+    }
+  }
+
+@media (min-width: 1001px) {
+    .main {
+        padding: 0 100px;
+    }
+} */

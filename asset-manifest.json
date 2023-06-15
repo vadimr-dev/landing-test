@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/landing-test/static/css/main.2d7bf759.css",
+    "main.js": "/landing-test/static/js/main.292cb7a0.js",
+    "static/js/787.756157f9.chunk.js": "/landing-test/static/js/787.756157f9.chunk.js",
+    "static/media/main-planet.jpg": "/landing-test/static/media/main-planet.3e80f53ba02f16282f52.jpg",
+    "static/media/largering-planet-1.png": "/landing-test/static/media/largering-planet-1.00b93519aaaa439f4b0b.png",
+    "static/media/smallring-planet-2.png": "/landing-test/static/media/smallring-planet-2.7797a9d80b686408d2ad.png",
+    "static/media/smallring-planet-1.png": "/landing-test/static/media/smallring-planet-1.e43080cab83ccfff9034.png",
+    "static/media/logo.svg": "/landing-test/static/media/logo.e5fbe4f31f60fbaf87cbd3813e4f3685.svg",
+    "static/media/discord.svg": "/landing-test/static/media/discord.41c6fb5634d2703db599b242e73ba75d.svg",
+    "index.html": "/landing-test/index.html",
+    "static/media/Arrow_right.svg": "/landing-test/static/media/Arrow_right.f1c14b823576dade50fa014dead301ea.svg",
+    "static/media/Arrow_left.svg": "/landing-test/static/media/Arrow_left.39f193f864002f1622e267a52e8c5bb5.svg",
+    "static/media/envelope-fill.svg": "/landing-test/static/media/envelope-fill.d4caa197caaefdf0c0b8dcad18aa75a4.svg",
+    "main.2d7bf759.css.map": "/landing-test/static/css/main.2d7bf759.css.map",
+    "main.292cb7a0.js.map": "/landing-test/static/js/main.292cb7a0.js.map",
+    "787.756157f9.chunk.js.map": "/landing-test/static/js/787.756157f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d7bf759.css",
+    "static/js/main.292cb7a0.js"
+  ]
+}
